@@ -12,9 +12,14 @@ ul.social-network li{
 
 .fa{
     font-size: 35pt; 
-    color:aliceblue;
+    color:purple;
     padding: 10px;
 }
+
 .fa-github:hover{
-color:blue;
+color:black;
 }
+
+.fa-instagram:hover{
+    color:black;
+    }
