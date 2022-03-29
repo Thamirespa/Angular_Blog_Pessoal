@@ -17,9 +17,21 @@ ul.social-network li{
 }
 
 .fa-github:hover{
-color:black;
+color:white;
 }
 
 .fa-instagram:hover{
-    color:black;
+    color:white;
+    }
+
+.fa-linkedin-square:hover{
+    color:white;
+}
+
+    .bg{
+        background: linear-gradient(to bottom, yellow, rgb(87, 0, 128));
+    }
+
+    .bg-footer{
+        background-color: purple;
     }
