@@ -1,1 +1,90 @@
-<p>inicio works!</p>
+<div class="container-fluid">
+
+<div class="row bg-secondary d-flex align-items-center">
+<div class="col-md-6">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-6" text-white>
+            <h1 class="fs-54">Seja bem vinde!</h1>
+            <h5 class="fs-18">Esxpresse aqui os seus pensamento e opiniões! </h5>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center mt-3 mb-5">
+        <div class="col-md-6">
+<button class="btn btn-outline-light mr-2" data-target="#novaPostagem">Nova postagem</button>
+<a class="btn btn-outline-light" href="#postagens">Ver postagens</a>
+        </div>    
+    </div>
+
+    </div>
+    <div class="col-md-6 d-flex justify-content-center">
+        <img src="https://images.unsplash.com/photo-1581573252212-c1cbd4114d82?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80" alt="" width="500px" height="500px">
+
+    </div>
+</div>
+</div>
+
+<!-- NAV -->
+<div class="container mb-5 mt-5" id="postagens">
+    <ul class="nav nav-tabs d-flex justify-content-center" id="myTab" role="tablist">
+
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active active text-secondary" id="home-tab" data-bs-toggle="tab" data-bs-target="#todasPostagens" type="button" role="tab" aria-controls="home" aria-selected="true">Todas postagens</button>
+        </li>
+
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active text-secondary" id="profile-tab" data-bs-toggle="tab" data-bs-target="#minhasPostagens" type="button" role="tab" aria-controls="profile" aria-selected="false">Minhas postagens</button>
+        </li>
+
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active text-secondary" id="contact-tab" data-bs-toggle="tab" data-bs-target="#postagemPorTema" type="button" role="tab" aria-controls="contact" aria-selected="false">Postagem por tema</button>
+        </li>
+
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel" aria-labelledby="home-tab">Todas postagens</div>
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"> Minhas postagens </div>
+        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">Postagem por tema</div>
+      </div>
+</div>
+<!-- MODAL-->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#novaPostagem" data-whatever="@mdo">Open modal for @mdo</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Open modal for @fat</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Open modal for @getbootstrap</button>
+
+<div class="modal fade" id="novaPostagem" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Nova Postagem</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="titulo" class="col-form-label">Título:</label>
+            <input type="text" class="form-control" id="titulo" placeholder="Digite o titulo">
+          </div>
+          <div class="form-group">
+            <label for="texto" class="col-form-label">Texo:</label>
+            <textarea class="form-control" name="texto" id="texto" rows="3"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="texto" class="col-form-label">Escolha um tema ou <a data-dismiss="modal" routerLink='/tema'>Cadastre um novo tema</a></label>
+            <select name="tema" id="tema" >
+                <option value="">Temas</option>
+            </select>
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-success">Publicar</button>
+      </div>
+    </div>
+  </div>
+</div>
