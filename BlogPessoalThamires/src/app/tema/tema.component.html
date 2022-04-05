@@ -12,12 +12,16 @@
 <h5 class="fs-18 text-center" >Veja aqui todos os temas cadastrados ou cadastre um novo:</h5>
         </div>
 <div class="row d-flex justify-content mt-4 mb-5">
-<div class="col-md-3">
+<div class="col-md-8">
     <div class="form-group">
-        <input type="text" class="form-control" id="descricao" placeholder="Digte a descrição do tema">
+        <input [(ngModel)]="tema.nome" type="text" class="form-control" id="descricao" placeholder="Digte o nome">
     </div>
+    <div class="form-group">
+      <input [(ngModel)]="tema.descricao" type="text" class="form-control" id="descricao" placeholder="Digte a descrição do tema">
+  </div>
+
     <div class="d-flex justify-content">
-        <button class="btn btn-light">Cadastrar</button>
+        <button class="btn btn-light" (click)="cadastrarTema()">Cadastrar</button>
     </div>
 </div>
 
@@ -29,7 +33,7 @@
 </div>
 
 
-<div class="container">
+<div class="container-fluid" >
 
     <div class="row mt-5">
         <div class="col-md-12">
@@ -45,29 +49,24 @@
                 <thead>
                   <tr>
                     <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col" lass="text-rigth">Modificações</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                  <tr *ngFor="let tema of listaTema">
+                    <th scope="row">{{tema.id}}</th>
+                    <td>{{tema.nome}}</td>
+                    <td>{{tema.descricao}}</td> 
+                    <td>
+                    <a [routerLink]="['/tema-edit',tema.id]"><i class="fa fa-pencil-square-o ml-2" aria-hidden="true"></i></a> 
+                  
+                    <a [routerLink]="['/tema-delete',tema.id]"><i class="fa fa-trash ml-2" aria-hidden="true"></i></a>
+                  </td> 
+                    
                   </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
+        
+                 
                 </tbody>
               </table>
 
