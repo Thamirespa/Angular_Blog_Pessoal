@@ -1,17 +1,49 @@
 <div class="container-fluid">
-    <div class="row d-flex aling-items-center">
+    <div class="row d-flex fundo aling-items-center">
+        <div class="snowflakes" aria-hidden="true">
+            <div class="snowflake">
+            ◍
+            </div>
+            <div class="snowflake">
+            ◍
+            </div>
+            <div class="snowflake">
+            ◍
+            </div>
+            <div class="snowflake">
+            ◍
+            </div>
+            <div class="snowflake">
+            ◍
+            </div>
+            <div class="snowflake">
+            ◍
+            </div>
+            <div class="snowflake">
+            ◍
+            </div>
+            <div class="snowflake">
+            ◍
+            </div>
+            <div class="snowflake">
+            ◍
+            </div>
+            <div class="snowflake">
+            ◍
+            </div>
+          </div>
         <div class="col-md-6">
 
             <div class="row d-flex justify-content-center">
                 <div class=" col-md-6">
-                    <h1 class="text-center mb-3">Entrar</h1>
+                    <h1 class="text-center mb-3 bg-2">Entrar</h1>
 
-                    <div class="form-group">
+                    <div class="form-group bg-2">
                         <label for="Usuário">Usuário</label>
                         <input [(ngModel)]='usuarioLogin.usuario' class="form-control" type="text" name="usuario" id="usuario" placeholder="Seu usuário">
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group bg-2">
                         <label for="senha" >Senha</label>
                         <input [(ngModel)]='usuarioLogin.senha' class="form-control" type="password" name="senha" id="senha" placeholder="Sua usuário">
                     </div>
@@ -21,8 +53,8 @@
 <div>
     <hr class="mt-5 mb-5">
 
-    <p class="text-center">
-        Não tem uma conta? <a routerLink="/cadastrar">Cadastre-se</a>
+    <p class="text-center ">
+     <a class="bg-2" routerLink="/cadastrar">Cadastre-se</a>
     </p>
 </div>
 
