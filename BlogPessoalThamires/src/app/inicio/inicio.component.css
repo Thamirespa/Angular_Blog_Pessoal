@@ -18,7 +18,7 @@
     }
 
     .fundo-2 {
-        background-repeat: no-repeat;
+    background-repeat: no-repeat;
     background-size: contain;
     text-align: center;
     background: linear-gradient(  rgb(87, 0, 128),yellow);

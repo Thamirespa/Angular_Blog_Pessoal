@@ -30,23 +30,18 @@ this.findByTema(id)
 }
 
 
-
-
 findByTema(id:number){
 this.temaService.getByIdTema(id).subscribe((resp: Tema)=>{
 this.tema=resp;
 })
 }
 
-  atualizarTema(){
+atualizarTema(){
 this.temaService.putTema(this.tema).subscribe((resp:Tema)=>{
   this.tema=resp;
   alert("tema atualizado com sucesso")
   this.router.navigate(['/tema'])
 })
-
-
-
   }
 
 }
